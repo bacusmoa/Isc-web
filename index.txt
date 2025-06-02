@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aerivision Song Contest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f0f4d, #1a1a60);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-grow: 1;
+    }
+    section {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 0.5rem;
+    }
+    .news-section {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    .leaderboard {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      row-gap: 0.5rem;
+      text-align: left;
+    }
+    .leaderboard div {
+      padding: 0.25rem 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    .footer-logo {
+      width: 40px;
+      height: auto;
+      margin-right: 1rem;
+    }
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="AerivisionV3.png" alt="Aerivision Logo" class="logo" />
+    <h1>Aerivision Song Contest</h1>
+    <div style="text-align: center; padding: 1rem; background-color: rgba(255, 255, 255, 0.05);">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhdTZVIl-FzyVdy3r3JppWzRRK5zPZsA0371B3WdMpjWKzSA/viewform?usp=header" target="_blank" style="font-size: 1.2rem; font-weight: bold;">APPLY FOR THE NEXT CONTEST HERE</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Contest</h2>
+      <p>The Aerivision Song Contest is an exciting singing competition where participants have the chance to win over 2,000 Robux! Only 6 to 8 contestants will be selected to compete. Each performer will sing a song of their choice in front of a live audience and judges.</p>
+    </section>
+
+    <section>
+      <h2>How to Participate</h2>
+      <p>If you want to compete, submit your application using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhdTZVIl-FzyVdy3r3JppWzRRK5zPZsA0371B3WdMpjWKzSA/viewform?usp=header" target="_blank">official Google Form</a>. Please note that space is limited, so only the best entries will be selected. Make sure your performance stands out!</p>
+    </section>
+
+    <section>
+      <h2>Voting & Results</h2>
+      <p>Every viewer will receive 6 votes to distribute however they wish. You can give all 6 to your favorite contestant or divide them among multiple participants. Final results will be determined by the total number of votes each contestant receives. Join us and help crown the winner!</p>
+    </section>
+
+    <section class="news-section">
+      <h2>News</h2>
+      <h3>MARI IS THE WINNER OF THE FIRST AERIVISION SONG CONTEST!</h3>
+      <p>With her winning song, <em>When I Was Your Man</em> by Bruno Mars, she was able to gather a grand total of 26 votes, and take 2,000 Robux home!</p>
+
+      <h3>FINAL RANKINGS</h3>
+
+      <div class="leaderboard">
+        <div>1</div><div>Mari</div><div>26</div>
+        <div>2</div><div>Darren</div><div>17</div>
+        <div>3</div><div>Viki</div><div>12</div>
+        <div>4</div><div>Veronica</div><div>11</div>
+        <div>5</div><div>Matt</div><div>10</div>
+        <div>6</div><div>Apprentice</div><div>9</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="aeriIncPng (1).png" alt="Aerivision Logo" class="footer-logo" />
+    <div>Operating Aerivision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a>: https://discord.gg/xdc67Gr9kk</div>
+  </footer>
+</body>
+</html>
