@@ -15,9 +15,10 @@
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #0f0f4d, #1a1a60);
+      background-repeat: no-repeat;
       background-attachment: fixed;
+      background-size: cover;
       color: #ffffff;
-      scroll-behavior: smooth;
     }
     body {
       display: flex;
@@ -29,12 +30,12 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
     .logo {
-      max-width: 300px;
+      max-width: 250px;
       height: auto;
       margin-bottom: 1rem;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin: 0;
     }
     .apply-banner {
@@ -60,10 +61,6 @@
     }
     section {
       margin-bottom: 2rem;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: left;
     }
     section h2 {
       font-size: 1.8rem;
@@ -71,21 +68,88 @@
       border-bottom: 2px solid #fff;
       padding-bottom: 0.5rem;
     }
-    .news-section {
+    .link-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .link-section h2 {
+      text-align: center;
+    }
+    .link-section span {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .tab {
+      width: 100%;
+      max-width: 800px;
       background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: transform 0.2s;
+      margin: 1rem 0;
     }
-    .leaderboard {
-      margin-top: 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
-      row-gap: 0.5rem;
+    .tab:hover {
+      transform: translateY(-5px);
     }
-    .leaderboard div {
-      padding: 0.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .tab a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffcc00;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
     }
-    iframe {
-      max-width: 100%;
+    .tab p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .news-preview {
+      position: relative;
+      max-width: 1330px;
+      margin: 2rem auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .news-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .news-preview-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+    .news-preview a {
+      text-decoration: none;
+    }
+    .video-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .video-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .video-section iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
       border-radius: 10px;
     }
     footer {
@@ -120,47 +184,32 @@
   </header>
 
   <main>
-    <section>
-      <h2>About the Contest</h2>
-      <p>The Aerivision Song Contest is a singing competition where participants have the chance to win over 2,000 Robux! Only 6 to 8 contestants will be selected to compete. Each performer will sing a song of their choice in front of a live audience.</p>
+    <section class="news-preview">
+      <a href="news.html">
+        <img src="mariwin.png" alt="Mari Wins ASC">
+        <div class="news-preview-text">MARI IS THE WINNER OF THE FIRST ASC!</div>
+      </a>
     </section>
 
-    <section>
-      <h2>How to Participate</h2>
-      <p>If you want to compete, submit your application using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhdTZVIl-FzyVdy3r3JppWzRRK5zPZsA0371B3WdMpjWKzSA/viewform?usp=header" target="_blank">official Google Form</a>. Please note that space is limited, so only the best entries will be selected. Make sure your performance stands out!</p>
-    </section>
-
-    <section>
-      <h2>Voting & Results</h2>
-      <p>Every viewer will receive 6 votes to distribute however they wish. You can give all 6 to your favorite contestant or divide them among multiple participants. Final results will be determined by the total number of votes each contestant receives. Join us and help crown the winner!</p>
-    </section>
-
-    <section>
-      <h2>2nd Aerivision Teaser</h2>
-      <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FpurQX4MkWI" frameborder="0" allowfullscreen></iframe>
+    <section class="link-section">
+      <h2><span>Explore</span> <span>More</span></h2>
+      <div class="tab">
+        <a href="about.html">About the Contest</a>
+        <p>Learn what the Aerivision Song Contest is all about, including our history, values, and goals.</p>
+      </div>
+      <div class="tab">
+        <a href="participate.html">How to Participate</a>
+        <p>Discover how you can take part in the contest and compete for over 2000 Robux in prizes.</p>
+      </div>
+      <div class="tab">
+        <a href="vote.html">How to Vote</a>
+        <p>See how to vote for your favorite performances and help decide the next Aerivision champion.</p>
       </div>
     </section>
 
-    <section class="news-section">
-      <h2>News</h2>
-      <h3>MARI IS THE WINNER OF THE FIRST AERIVISION SONG CONTEST!</h3>
-      <p>With her winning song, <em>When I Was Your Man</em> by Bruno Mars, she was able to gather a grand total of 26 votes, and take 2,000 Robux home!</p>
-
-      <h3>FINAL RANKINGS</h3>
-      <div class="leaderboard">
-        <div>1</div><div>Mari</div><div>26</div>
-        <div>2</div><div>Darren</div><div>17</div>
-        <div>3</div><div>Viki</div><div>12</div>
-        <div>4</div><div>Veronica</div><div>11</div>
-        <div>5</div><div>Matt</div><div>10</div>
-        <div>6</div><div>Apprentice</div><div>9</div>
-      </div>
-
-      <h3>1st Aerivision Song Contest Playback</h3>
-      <div style="text-align: center; margin-top: 1rem;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SxKSTosp6us" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <section class="video-section">
+      <h3>2nd Aerivision Teaser</h3>
+      <iframe src="https://www.youtube.com/embed/FpurQX4MkWI" allowfullscreen></iframe>
     </section>
   </main>
 
