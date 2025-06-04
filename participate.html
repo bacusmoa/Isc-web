@@ -11,50 +11,41 @@
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #0f0f4d, #1a1a60);
-      color: #fff;
-      padding: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     nav {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       padding: 1rem;
-      text-align: center;
     }
     nav a {
       color: #ffcc00;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a.active {
+    nav a:hover {
       text-decoration: underline;
     }
-    .container {
+    main {
       max-width: 800px;
-      margin: 2rem auto;
-      background-color: rgba(0, 0, 0, 0.4);
+      margin: auto;
       padding: 2rem;
-      border-radius: 12px;
+      flex-grow: 1;
     }
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p, li {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .form-link {
-      text-align: center;
+    h2 {
       margin-top: 2rem;
+      border-bottom: 1px solid #fff;
     }
-    .form-link a {
-      color: #ffcc00;
-      font-weight: bold;
-      text-decoration: none;
+    ul {
+      padding-left: 1.2rem;
     }
-    .form-link a:hover {
-      text-decoration: underline;
+    li {
+      margin-bottom: 0.5rem;
     }
     footer {
       background-color: rgba(0, 0, 0, 0.2);
@@ -75,25 +66,41 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="participate.html" class="active">Participate</a>
+    <a href="participate.html">Participate</a>
     <a href="vote.html">Vote</a>
+    <a href="news.html">News</a>
   </nav>
-  <div class="container">
+
+  <main>
     <h1>How to Participate</h1>
-    <p>Think you've got what it takes? Here’s how to get in:</p>
+    <p>Interested in joining the contest? Follow the rules and submit your entry using the application link provided on the homepage.</p>
+
+    <h2>ENTRY RULES</h2>
     <ul>
-      <li>Only 6–8 contestants will be selected to ensure a high-quality show.</li>
-      <li>Pick a song you're passionate about.</li>
-      <li>Showcase your vocals in front of an audience ready to vote!</li>
+      <li>Song must be under 4 minutes.</li>
+      <li>No slurs or too much profanity.</li>
+      <li>Must not include hate speech.</li>
+      <li>You must have little to no background noise while on stage.</li>
+      <li>Music must be loud and clear. External speakers allowed.</li>
+      <li>You cannot submit your own song in this competition. This option will become available in future contests.</li>
+      <li>Music must be instrumental.</li>
     </ul>
-    <p>To apply, click the link below and fill out the official entry form:</p>
-    <div class="form-link">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhdTZVIl-FzyVdy3r3JppWzRRK5zPZsA0371B3WdMpjWKzSA/viewform?usp=header" target="_blank">Apply for the next contest here</a>
-    </div>
-  </div>
+
+    <h2>SINGER RULES</h2>
+    <ul>
+      <li>You can only be participating by yourself.</li>
+      <li>No manipulating votes (bribing, convincing, blackmail, etc.).</li>
+      <li>Be kind and respectful to other singers.</li>
+    </ul>
+
+    <p><strong>RULES ARE SUBJECT TO CHANGE!</strong> Once the final running order is confirmed, singers will be updated. Practice well—your best performance is key!</p>
+  </main>
+
   <footer>
     <img src="aeriIncPng (1).png" alt="Aerivision Logo" class="footer-logo" />
-    <div>Operating Aerivision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a>: https://discord.gg/xdc67Gr9kk</div>
+    <div>Operating Aerivision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a></div>
   </footer>
 </body>
 </html>
+
+
