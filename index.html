@@ -15,7 +15,6 @@
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(135deg, #0f0f4d, #1a1a60);
-      background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       color: #ffffff;
@@ -23,11 +22,6 @@
     body {
       display: flex;
       flex-direction: column;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.4);
     }
     nav {
       background-color: rgba(0, 0, 0, 0.3);
@@ -44,6 +38,11 @@
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
     }
     .logo {
       max-width: 250px;
@@ -126,7 +125,9 @@
       font-size: 0.95rem;
       color: #ddd;
     }
-    .news-preview {
+
+    /* Slider Styles */
+    .news-slider {
       position: relative;
       max-width: 1330px;
       margin: 2rem auto;
@@ -134,7 +135,22 @@
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
-    .news-preview img {
+    .slider-container {
+      position: relative;
+      height: 100%;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
+    }
+    .slide img {
       width: 100%;
       height: auto;
       display: block;
@@ -150,9 +166,25 @@
       font-weight: bold;
       color: #ffcc00;
     }
-    .news-preview a {
-      text-decoration: none;
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 2;
     }
+    .slider-btn.prev {
+      left: 10px;
+    }
+    .slider-btn.next {
+      right: 10px;
+    }
+
     .video-section {
       text-align: center;
       margin-top: 2rem;
@@ -208,11 +240,23 @@
   </header>
 
   <main>
-    <section class="news-preview">
-      <a href="news.html">
-        <img src="mariwin.png" alt="Mari Wins ASC">
-        <div class="news-preview-text">MARI IS THE WINNER OF THE FIRST ASC!</div>
-      </a>
+    <section class="news-slider">
+      <div class="slider-container">
+        <div class="slide active">
+          <a href="news.html">
+            <img src="mariwin.png" alt="Mari Wins ASC">
+            <div class="news-preview-text">MARI IS THE WINNER OF THE FIRST ASC!</div>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="news.html">
+            <img src="asc2lr.png" alt="Second Aerivision Line-up">
+            <div class="news-preview-text">SECOND AERIVISION LINE-UP RELEASED</div>
+          </a>
+        </div>
+        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
     </section>
 
     <section class="link-section">
@@ -241,5 +285,27 @@
     <img src="aeriIncPng (1).png" alt="Aerivision Logo" class="footer-logo" />
     <div>Operating Aerivision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a></div>
   </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(() => changeSlide(1), 5000); // Auto-slide every 5 seconds
+  </script>
 </body>
 </html>
+
