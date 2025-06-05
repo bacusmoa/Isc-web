@@ -177,12 +177,17 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
       z-index: 2;
+      user-select: none;
     }
     .slider-btn.prev {
       left: 10px;
     }
     .slider-btn.next {
       right: 10px;
+    }
+    .slider-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
     }
 
     .video-section {
@@ -289,23 +294,66 @@
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
-
+    const slideCount = slides.length;
+    const countdownSeconds = 10;
+    let countdown = countdownSeconds;
+    let countdownInterval;
+    let autoSlideTimeout;
+  
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+  
+    function updateArrowButtons() {
+      prevBtn.disabled = (currentSlide === 0);
+      nextBtn.disabled = (currentSlide === slideCount - 1);
+    }
+  
     function showSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= slideCount) index = slideCount - 1;
+  
       slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-          slide.classList.add('active');
-        }
+        slide.classList.toggle('active', i === index);
       });
+      currentSlide = index;
+      updateArrowButtons();
+      resetCountdown();
     }
-
+  
     function changeSlide(direction) {
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      showSlide(currentSlide);
+      let newIndex = currentSlide + direction;
+      if (newIndex < 0 || newIndex >= slideCount) {
+        return;
+      }
+      showSlide(newIndex);
     }
-
-    setInterval(() => changeSlide(1), 5000); // Auto-slide every 5 seconds
-  </script>
+  
+    function resetCountdown() {
+      countdown = countdownSeconds;
+  
+      if (countdownInterval) clearInterval(countdownInterval);
+      if (autoSlideTimeout) clearTimeout(autoSlideTimeout);
+  
+      countdownInterval = setInterval(() => {
+        countdown--;
+        // console.log("Countdown:", countdown);
+        if (countdown <= 0) {
+          clearInterval(countdownInterval);
+        }
+      }, 1000);
+  
+      autoSlideTimeout = setTimeout(() => {
+        if (currentSlide < slideCount - 1) {
+          changeSlide(1);
+        } else {
+          // If at last slide, go back to first slide
+          showSlide(0);
+        }
+      }, countdownSeconds * 1000);
+    }
+  
+    // Initialize slider on page load
+    showSlide(currentSlide);
+  </script>  
 </body>
 </html>
-
