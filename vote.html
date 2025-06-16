@@ -66,22 +66,6 @@
       margin-right: 1rem;
     }
 
-            /* start of the notice block */
-        a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr.divider {
-      border: none;
-      border-top: 2px solid #ffcc00;
-      margin: 4rem auto;
-      width: 60%;
-      opacity: 0.6;
-    }
-
     .notice-box {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 1.5rem;
@@ -100,9 +84,14 @@
       font-size: 1.05rem;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(0.95); }
-      100% { opacity: 1; transform: scale(1); }
+    .voting-info {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.2rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #ffffff;
     }
 
     @keyframes fadeInUp {
@@ -117,9 +106,6 @@
       .news-details {
         padding: 1.5rem;
       }
-      .ranking-table th, .ranking-table td {
-        padding: 0.5rem;
-      }
     }
   </style>
 </head>
@@ -132,10 +118,7 @@
       Please note the contest date is <strong>always subject to change</strong>.
     </p>
   </div>
-  <!-- end of code -->
-  </style>
-</head>
-<body>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -146,8 +129,14 @@
 
   <main>
     <h1>Voting in Aerivision</h1>
-    <p>Currently, the Aerivision Song Contest is not on at the momment. So please join out discord for more updates. https://discord.gg/xdc67Gr9kk</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDxr-UNXVsd7yDmK1uF_o5xfIAlHWOZ8uzncGj5UmzZEYQwg/viewform?usp=header" target="_blank" class="button">Voting form</a>
+    <p>Currently, the Aerivision Song Contest is not on at the moment. So please join our Discord for more updates. <br><a href="https://discord.gg/xdc67Gr9kk" target="_blank">https://discord.gg/xdc67Gr9kk</a></p>
+
+    <div class="voting-info">
+      <strong>How Voting Works:</strong><br/>
+      Every audience member is given a total of <strong>11 votes</strong> to use. You may distribute your votes across multiple contestants, or give all 11 to a single performer. It’s completely up to you!
+    </div>
+
+  <!-- add: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDxr-UNXVsd7yDmK1uF_o5xfIAlHWOZ8uzncGj5UmzZEYQwg/viewform?usp=header" target="_blank" class="button">Voting form</a> when voting begins.  -->
   </main>
 
   <footer>
@@ -156,4 +145,3 @@
   </footer>
 </body>
 </html>
-
