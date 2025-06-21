@@ -66,24 +66,6 @@
       margin-right: 1rem;
     }
 
-    .notice-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      margin: 1rem 2rem;
-      border-radius: 12px;
-      max-width: 1000px;
-      align-self: center;
-      text-align: center;
-      animation: fadeInUp 0.8s ease-out;
-    }
-    .notice-box h2 {
-      color: #ffcc00;
-      margin-bottom: 0.5rem;
-    }
-    .notice-box p {
-      font-size: 1.05rem;
-    }
-
     .voting-info {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 1.2rem 1.5rem;
@@ -92,11 +74,6 @@
       font-size: 1.05rem;
       line-height: 1.6;
       color: #ffffff;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
@@ -110,14 +87,6 @@
   </style>
 </head>
 <body>
-  <div class="notice-box">
-    <h2>📢 NOTICE</h2>
-    <p>
-      The contest has been <strong>delayed until June 22</strong>.<br/>
-      If you are busy and cannot attend on the new date, <strong>DM the owner of Aeri Inc. (@aeri)</strong> as soon as possible.<br/>
-      Please note the contest date is <strong>always subject to change</strong>.
-    </p>
-  </div>
 
   <nav>
     <a href="index.html">Home</a>
@@ -136,7 +105,9 @@
       Every audience member is given a total of <strong>12 votes</strong> to use. You may distribute your votes across multiple contestants, or give all 12 to a single performer. It’s completely up to you!
     </div>
 
-  <!-- add: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDxr-UNXVsd7yDmK1uF_o5xfIAlHWOZ8uzncGj5UmzZEYQwg/viewform?usp=header" target="_blank" class="button">Voting form</a> when voting begins.  -->
+    <!-- Uncomment when voting opens
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDxr-UNXVsd7yDmK1uF_o5xfIAlHWOZ8uzncGj5UmzZEYQwg/viewform?usp=header" target="_blank" class="button">Voting form</a>
+    -->
   </main>
 
   <footer>
@@ -145,3 +116,4 @@
   </footer>
 </body>
 </html>
+
