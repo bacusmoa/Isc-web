@@ -1,3 +1,4 @@
+<!-- FULL HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,6 +103,12 @@
       width: 60%;
       opacity: 0.6;
     }
+    canvas {
+      display: block;
+      margin: 1.5rem auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
     footer {
       background-color: rgba(0, 0, 0, 0.2);
       display: flex;
@@ -150,19 +157,54 @@
   </nav>
 
   <header>
-    <h1>IMPORTANT NOTICE FROM DIRECTIOR GENERAL</h1>
+    <h1>Darren Wins the 2nd Aerivision Song Contest!</h1>
   </header>
 
   <div class="news-details">
-    <h2 style="color:#ffcc00;">IMPORTANT NOTICE FROM DIRECTOR GENERAL</h2>
-    <p>The 3rd Aerivision Song Contest has been <strong>CANCELLED</strong>. This was a tough decision to make, but considering the current status of everything regarding the contest, this decision was necessary. This does not mean Aerivision is over—rather, a revamp of Aeri Inc.’s administration will be initiated to ensure a stronger and more sustainable future for both Aeri Inc. and the Aerivision Song Contest.<br><br>
+    <h2 style="color:#ffcc00;">🎉 Introducing a New Voting System!</h2>
+    <p>The Aerivision Song Contest is evolving, and with it comes a brand new method of audience and jury voting designed to make the competition more fair and exciting.</p>
 
-    <p>Applications for the contest will remain open for those still interested in participating. A group discussion will be arranged with all applicants to determine a more suitable date for the 3rd Aerivision Song Contest. In addition, applications for specialized roles—such as marketing, contestant coordination, and jury management—will open in the near future. While the decision to postpone was difficult, we believe that with proper administrative reform, we can confidently relaunch the contest in a stronger and more organized way.</p>
+    <h3>🗳️ Audience Voting</h3>
+    <p>You will be presented with a set of rating questions. For each one, you'll assign a specific point value to the contestants, starting with <strong>6 points</strong> for your favorite, down to <strong>1 point</strong> for your least favorite. Each vote directly contributes to the contestant’s total score. It is also entirely possible that a contestant may receive <strong>0 points</strong> if not selected in a ranking.</p>
 
-    <p>We deeply thank all participants from previous editions. We will return soon!</p>
+    <h3>🏅 Jury Voting</h3>
+    <p>Jury members will each be given a set of fixed points: <strong>1, 2, 3, 4, 5, 6, 10, and 12</strong>. These jurors will assign their points based on how impressed they are with the performers—12 points going to their top favorite. This creates a fair ranking system from the jury's perspective. There are typically around 10 jurors per contest.</p>
 
-    <em>– Director General of Aeri Inc, <strong>aeri</strong> (@bacusmoa)</em></p>
+    <canvas id="voteCanvas" width="600" height="300"></canvas>
   </div>
+
+  <hr class="divider">
+
+  <div class="news-details">
+    <h2 style="color:#ffcc00;">IMPORTANT NOTICE FROM DIRECTOR GENERAL</h2>
+    <p>The 3rd Aerivision Song Contest has been <strong>CANCELLED</strong>. This was a tough decision to make, but considering the current status of everything regarding the contest, this decision was necessary. This does not mean Aerivision is over—rather, a revamp of Aeri Inc.’s administration will be initiated to ensure a stronger and more sustainable future for both Aeri Inc. and the Aerivision Song Contest.</p>
+    <p>Applications will remain open for those still interested in participating. A group discussion will be arranged with all applicants to determine a new date for the 3rd Aerivision Song Contest. Applications for special roles such as marketing, contestant coordination, and jury management will open soon. With proper reform, we aim to return stronger than ever.</p>
+    <em>– Director General of Aeri Inc, <strong>aeri</strong> (@bacusmoa)</em>
+  </div>
+
+  <!-- Previous Sections Remain the Same -->
+
+  <script>
+    const canvas = document.getElementById("voteCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const contestants = ["Darren", "Shu", "Viki", "Basil", "Mythical", "Maddy"];
+    const points = [6, 5, 4, 3, 2, 1];
+
+    ctx.font = "16px Montserrat";
+    ctx.fillStyle = "#ffcc00";
+    ctx.fillText("🗳️ Example Audience Vote:", 20, 30);
+
+    for (let i = 0; i < contestants.length; i++) {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillText(`${points[i]} Points → ${contestants[i]}`, 40, 60 + i * 30);
+    }
+
+    ctx.fillStyle = "#ffcc00";
+    ctx.fillText("💡 Note: Some contestants may receive 0 points from the audience.", 20, 260);
+  </script>
+</body>
+</html>
 
   <hr class="divider">
 
@@ -240,4 +282,3 @@
   </footer>
 </body>
 </html>
-
