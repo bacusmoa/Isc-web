@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>We'll Be Right Back - Aerivision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(-45deg, #0f0f4d, #1a1a60, #2c2c7a, #4b4bb2);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    img.logo {
+      max-width: 300px;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    a.discord-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #5865F2;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    a.discord-link:hover {
+      background: #4752c4;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    .footer-logo {
+      display: block;
+      margin: 0.5rem auto 0;
+      max-width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <img src="AerivisionATV1.png" alt="Aerivision Logo" class="logo">
+  <h1>More magic is happening here!</h1>
+  <p>The ASC website is being renovated. We'll be back soon!</p>
+  <a href="https://discord.gg/xdc67Gr9kk" target="_blank" class="discord-link">Join our Discord</a>
+
+  <footer>
+    Operated by
+    <img src="ATVlogocrop.png" alt="ATV Logo" class="footer-logo">
+  </footer>
+</body>
+</html>
