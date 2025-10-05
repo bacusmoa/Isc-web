@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vote - Intervision Song Contest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="ascfavicon.ico" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f0f4d, #1a1a60);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      flex-grow: 1;
+      text-align: center;
+    }
+    a.button {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 2rem;
+      transition: background-color 0.3s;
+    }
+    a.button:hover {
+      background-color: #e6b800;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    .footer-logo { width: 60px; margin-right: 1rem; }
+    a { color: #ffcc00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .voting-info {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.2rem 1.5rem;
+      margin-top: 2rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+
+    .diagram {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .diagram h3 {
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+    }
+    .diagram ul {
+      list-style: none;
+      padding: 0;
+    }
+    .diagram li {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.3rem;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="participate.html">Participate</a>
+    <a href="vote.html">Vote</a>
+    <a href="news.html">News</a>
+    <a href="positions.html">Jobs</a>
+  </nav>
+  
+
+  <main>
+    <h1>Voting in Intervision</h1>
+
+    <div class="voting-info">
+      <strong>How Voting Works:</strong><br/>
+      Intervision uses a balanced <strong>50/50 voting process</strong>. Half of the total score comes from a jury composed of representatives from all 42 participating countries, while the other half comes from the public vote. The public’s votes are allocated to each country, determining who will earn the highest combined total. This system ensures that both expert opinion and audience support decide the winner of the Intervision Song Contest.
+    </div>
+    <a href="https://vote.gabys.xyz/avrotv/isc1" class="button" target="_blank">Go to Voting Portal</a>
+  </main>
+
+  <footer>
+    <img src="ATVLogoCrop.png" alt="Aerivision Logo" class="footer-logo" />
+    <div>Operating Intervision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a></div>
+  </footer>
+</body>
+</html>

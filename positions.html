@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Positions - Intervision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="ascfavicon.ico" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f0f4d, #1a1a60);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      flex-grow: 1;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #ffcc00;
+    }
+    .summary {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    .job-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 204, 0, 0.4);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .job-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+    }
+    .job-description {
+      font-size: 1rem;
+      color: #f0f0f0;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .apply-btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .apply-btn:hover {
+      background-color: #e6b800;
+    }
+    .guidelines-btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: transparent;
+      color: #ffcc00;
+      font-weight: bold;
+      border-radius: 8px;
+      border: 2px solid #ffcc00;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
+    .guidelines-btn:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+    .footer-logo {
+      width: 60px;
+      margin-right: 1rem;
+    }
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="participate.html">Participate</a>
+    <a href="vote.html">Vote</a>
+    <a href="news.html">News</a>
+    <a href="positions.html">Jobs</a>
+  </nav>
+
+  <main>
+    <h1>Work at ATV & Intervision</h1>
+    <div class="summary">
+      Join ATV to help create exciting, community-driven events! Working with us means making an impact, collaborating with talented people, and earning Robux for your contributions. Be part of something that brings music, fun, and creativity to life!
+    </div>
+
+    <h2>Open Positions</h2>
+
+    <div class="job-card">
+      <div class="job-title">Recruitment Coordinator</div>
+      <div class="job-description">
+        Help us find and recruit talented contestants for Intervision. Play a key role in building a vibrant and competitive event.
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVHMckKZ2CvM6i8jW49zdxsl-Cue_-VjHVJsQbWPMytVIYiQ/viewform?usp=header" target="_blank" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <div class="job-title">Event Technology</div>
+      <div class="job-description">
+        Help create immersive lighting & effects for all 42 contestants. This is a key role in setting the atmosphere and ensuring performances are visually stunning.
+      </div>
+      <a href="Down.html" target="_blank" class="apply-btn">Temporarily Closed</a>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://docs.google.com/document/d/1qy9flwTgZO4aWDBdxFycfTbp942QdS7W--HQ_tRYdKM/edit?usp=sharing" target="_blank" class="guidelines-btn">View Position Guidelines</a>
+    </div>
+  </main>
+
+  <footer>
+    <img src="ATVLogoCrop.png" alt="ATV Logo" class="footer-logo" />
+    <div>Operating Intervision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a></div>
+  </footer>
+</body>
+</html>
+
