@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News - Intervision Song Contest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="ascfavicon.ico" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f0f4d, #1a1a60);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+    }
+
+    /* News Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .news-card {
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .news-card h2 {
+      font-size: 1.3rem;
+      color: #ffcc00;
+      margin-bottom: 1rem;
+    }
+    .news-card p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      padding: 2rem;
+    }
+    .modal-content {
+      background: rgba(0,0,50,0.95);
+      border-radius: 12px;
+      max-width: 900px;
+      padding: 2rem;
+      position: relative;
+      animation: fadeInUp 0.5s ease;
+    }
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.8rem;
+      color: #ffcc00;
+      cursor: pointer;
+    }
+    .modal h2 { color: #ffcc00; }
+    .modal img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+    }
+    .country-list {
+      columns: 2;
+      margin-top: 1.5rem;
+      line-height: 1.8;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #ffcc00;
+      text-align: center;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-top: auto;
+    }
+    .footer-logo { width: 40px; margin-right: 1rem; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="participate.html">Participate</a>
+    <a href="vote.html">Vote</a>
+    <a href="news.html">News</a>
+    <a href="positions.html">Jobs</a>
+  </nav>
+
+  <header>
+    <h1>Latest News</h1>
+  </header>
+
+  <section class="news-grid">
+    <div class="news-card" onclick="openModal('la')">
+      <h2>🎬 Intervision 01 will take place in Los Angeles</h2>
+      <p>The city of stars and cultural diversity hosts the debut of Intervision.</p>
+    </div>
+
+    <div class="news-card" onclick="openModal('countries')">
+      <h2>🌎 All Participating Countries</h2>
+      <p>See the full list of 42 countries competing in Intervision.</p>
+    </div>
+
+    <div class="news-card" onclick="openModal('intervision')">
+      <h2>🌍 Intervision Song Contest Announced</h2>
+      <p>42 countries, 4,000 Robux prize. The new global contest begins.</p>
+    </div>
+  </section>
+
+  <!-- Countries Modal -->
+  <div id="countries" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('countries')">&times;</span>
+      <h2>🌎 Participating Countries</h2>
+      <div class="country-list">
+        🇦🇱 Albania<br>
+        🇦🇷 Argentina<br>
+        🇦🇺 Australia<br>
+        🇦🇹 Austria<br>
+        🇦🇿 Azerbaijan<br>
+        🇧🇪 Belgium<br>
+        🇧🇷 Brazil<br>
+        🇰🇭 Cambodia<br>
+        🇨🇦 Canada<br>
+        🇨🇳 China<br>
+        🇨🇴 Colombia<br>
+        🇭🇷 Croatia<br>
+        🇩🇰 Denmark<br>
+        🇪🇪 Estonia<br>
+        🇫🇮 Finland<br>
+        🇫🇷 France<br>
+        🇩🇪 Germany<br>
+        🇬🇷 Greece<br>
+        🇮🇸 Iceland<br>
+        🇮🇪 Ireland<br>
+        🇮🇹 Italy<br>
+        🇯🇵 Japan<br>
+        🇱🇻 Latvia<br>
+        🇱🇹 Lithuania<br>
+        🇱🇺 Luxembourg<br>
+        🇲🇾 Malaysia<br>
+        🇲🇹 Malta<br>
+        🇲🇽 Mexico<br>
+        🇳🇱 Netherlands<br>
+        🇳🇴 Norway<br>
+        🇵🇭 Philippines<br>
+        🇵🇹 Portugal<br>
+        🇸🇬 Singapore<br>
+        🇿🇦 South Africa<br>
+        🇰🇷 South Korea<br>
+        🇪🇸 Spain<br>
+        🇸🇪 Sweden<br>
+        🇨🇭 Switzerland<br>
+        🇹🇼 Taiwan<br>
+        🇺🇦 Ukraine<br>
+        🇬🇧 United Kingdom<br>
+        🇺🇸 United States<br>
+      </div>
+      <p class="note">* List is subject to change</p>
+    </div>
+  </div>
+
+  <!-- Intervision Modal -->
+  <div id="intervision" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('intervision')">&times;</span>
+      <h2>🌍 Intervision Song Contest</h2>
+      <p>Aerivision is over, but we are excited to announce the <span class="highlight">Intervision Song Contest</span>! Featuring <strong>42 participating countries</strong>, this competition takes the stage to a whole new level. The grand prize? Over <span class="highlight">4,000 Robux</span>! Intervision will take place on Roblox, offering an entirely different interactive experience!</p>
+      <img src="IntervisionReveal.png" alt="Intervision Reveal">
+    </div>
+  </div>
+
+  <footer>
+    <img src="ATVLogoCrop.png" alt="Intervision Logo" class="footer-logo" />
+    <div>Operating Intervision. Join our <a href="https://discord.gg/xdc67Gr9kk" target="_blank">Discord</a></div>
+  </footer>
+
+  <div id="la" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('la')">&times;</span>
+      <h2>🎬 Intervision 01 — Los Angeles</h2>
+      <p>Los Angeles, California, known as the city of dreams, will serve as the host city for the first Intervision Song Contest. A melting pot of cultures, languages, and creative expression, LA perfectly captures the spirit of global unity through music. From the Hollywood Hills to the vibrant downtown, Los Angeles will provide a dazzling stage for all 42 competing nations to shine.</p>
+      <img src="LAReveal.png" alt="Los Angeles Host Announcement">
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</body>
+</html>
